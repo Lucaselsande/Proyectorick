@@ -2,10 +2,16 @@ import NavBar from "./NavBar"
 
 
 const About = () => {
-    return(
+    return (
         <div>
-            <NavBar/>
-            Lucas 38-a
+
+            <h2>
+                Lucas Sande
+            </h2>
+            <h1>
+              38-a  
+            </h1>
+            
         </div>
     )
 }

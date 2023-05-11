@@ -1,41 +1,41 @@
 
-import Cards from './Cards';
-import styles from './styles/Todos.module.css'
-import { useState } from 'react';
-import NavBar from './NavBar';
-import axios from 'axios';
+// import Cards from './Cards';
+// import styles from './styles/Todos.module.css'
+// import { useState } from 'react';
+// import NavBar from './NavBar';
+// import axios from 'axios';
 
-const Todo =() => {
+// const Todo =() => {
    
-    const [characters, setCharacters] = useState([]);
+//     const [characters, setCharacters] = useState([]);
  
-    function onSearch(id) {
-       axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-          if (data.name) {
-             setCharacters((oldChars) => [...oldChars, data]);
-          } else {
-             window.alert('¡No hay personajes con este ID!');
-          }
-       });
-    };
+//     function onSearch(id) {
+//        axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+//           if (data.name) {
+//              setCharacters((oldChars) => [...oldChars, data]);
+//           } else {
+//              window.alert('¡No hay personajes con este ID!');
+//           }
+//        });
+//     };
  
  
-    const onClose = (id) =>{
-       setCharacters(
-          characters.filter((char)=>{
-             return char.id !== Number(id)
-          })
-       )
-    };
+//     const onClose = (id) =>{
+//        setCharacters(
+//           characters.filter((char)=>{
+//              return char.id !== Number(id)
+//           })
+//        )
+//     };
  
-    return (
-       <div className={styles.fondo}>
-          <NavBar onSearch={onSearch}/>
-          <Cards characters={characters} onClose={onClose}/>
-       </div>
-    );
- }
-export default Todo
+//     return (
+//        <div className={styles.fondo}>
+//           <NavBar onSearch={onSearch}/>
+//           <Cards characters={characters} onClose={onClose}/>
+//        </div>
+//     );
+//  }
+// export default Todo
 
 
 // import './App.css';
