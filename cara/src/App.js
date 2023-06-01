@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 import Favorites from './components/Favorites';
 import Create from './components/create';
 import { useSelector } from 'react-redux';
-
+import SearchBar from './components/SearchBar';
 
 
 
@@ -120,10 +120,11 @@ function App() {
 
    return (
       <div>
-         {local.pathname !== '/' && <NavBar onSearch={onSearch} />}
+         {local.pathname !== '/' && <NavBar />}
+         {local.pathname === '/home' && <SearchBar onSearch={onSearch} />}
          <Routes>
             <Route path='/' element={<Form login={login} />} />
-            <Route path='/home' element={<Cards characters={[...personajeee,...characters]}  onClose={onClose} />} />
+            <Route path='/home' element={<Cards characters={[...personajeee,...characters]}  onClose={onClose} />}/>
             <Route path='/about' element={<About />} />
             <Route path='/create' element={<Create />} />
             <Route path='/deatil' element={<Deatil />}>

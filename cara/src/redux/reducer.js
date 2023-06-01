@@ -5,7 +5,7 @@ import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, CREAR } from "./actions-type";
 const initialState = {
     myFavorites: [],
     allCharactersFav: [],
-    todos : [],
+    // todos : [],
     personaje: []
 }
 

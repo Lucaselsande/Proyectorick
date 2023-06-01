@@ -21,7 +21,7 @@ const NavBar = ({ onSearch }) => {
             <NavLink to='/create'>
                 <button>CREAR</button>
             </NavLink>
-            <SearchBar onSearch={onSearch} />
+            {/* <SearchBar onSearch={onSearch} /> */}
         </div>
     );
 };

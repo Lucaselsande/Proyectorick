@@ -1,7 +1,5 @@
 import { useState } from "react"
-import Card from "./Card"
 import imagen from '../imagen/imagen.jpg'
-import Cards from "./Cards"
 import { useDispatch } from "react-redux"
 import { crearpj } from "../redux/actions"
 
