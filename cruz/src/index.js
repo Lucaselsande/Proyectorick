@@ -1,5 +1,5 @@
 const express = require('express');
-const { character, logins, fav, deletfav } = require('./routes/index')
+const  router  = require('./routes/index')
 const { conn } = require('./db')
 const server = express();
 const PORT = 3001;
@@ -21,14 +21,14 @@ server.use((req, res, next) => {
          next();
       });
       server.use(express.json())
-      server.use('/rickandmorty',character )
-      server.use('/rickandmorty',logins )
-      server.use('/rickandmorty',fav )
-      server.use('/rickandmorty',deletfav )
+      server.use('/rickandmorty',router )
+      // server.use('/rickandmorty',logins )
+      // server.use('/rickandmorty',fav )
+      // server.use('/rickandmorty',deletfav )
       
       
       
-      conn.sync({force: true})
+      conn.sync({force: false})
       server.listen(PORT, () => {
    console.log('Server raised in port: ' + PORT);
 });
